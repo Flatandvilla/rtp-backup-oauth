@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Privacy notice for the private RTP Backup Google Drive backup utility.">
+  <title>Privacy Notice · RTP Backup</title>
+  <style>
+    :root{color-scheme:light;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#18243a;background:#f4f6fa}
+    body{margin:0;line-height:1.7}main{max-width:760px;margin:40px auto;padding:40px;background:white;border:1px solid #dbe2ee;border-radius:16px}
+    h1{font-size:2.2rem;line-height:1.2;letter-spacing:-.03em}h2{font-size:1.15rem;margin-top:30px}a{color:#164da4;text-underline-offset:3px}.muted{color:#53627a;font-size:.9rem}li{margin:7px 0}
+    footer{margin-top:32px;border-top:1px solid #e2e7ef;padding-top:18px}@media(max-width:650px){main{margin:16px 12px;padding:26px}}
+  </style>
+</head>
+<body>
+<main>
+  <a href="index.html">RTP Backup</a>
+  <h1>Privacy Notice</h1>
+  <p class="muted">Last updated: 3 November 2026</p>
+  <p>This notice describes the Google Drive integration used by <strong>RTP Backup</strong>, a privately operated server backup utility configured by the administrator who authorizes access. The tool is used to maintain offsite copies of encrypted backup repositories, not to provide a public file-sharing service.</p>
+  <h2>Information accessed and stored</h2>
+  <ul>
+    <li><strong>Authorization information:</strong> OAuth access and refresh tokens and client configuration needed to connect to the account that the administrator authorizes.</li>
+    <li><strong>Drive metadata:</strong> folder and object names, identifiers, sizes, modification times, available hashes, storage quota and connection information needed to locate the backup destination and verify transfers.</li>
+    <li><strong>Backup objects:</strong> encrypted repository objects copied from the backup server to the configured Google Drive folder. Backup contents may include business or personal information from the backed-up systems; the uploader transfers the repository objects rather than analyzing their contents.</li>
+    <li><strong>Operational records:</strong> transfer status, timestamps, object paths, byte counts and diagnostic errors used to operate and troubleshoot the backup.</li>
+  </ul>
+  <h2>Purpose and permission scope</h2>
+  <p>Google API access is used to authenticate the connection, locate the existing backup folder, read relevant metadata or backup objects for verification, and add missing backup objects. The requested Google Drive OAuth scope technically permits broader access than the configured backup folder. The upload job is configured for the administrator-selected destination and does not use unrelated Drive files for another purpose.</p>
+  <p>The uploader has no advertising, visitor analytics or AI-training feature. Google API data is used for the backup and operational verification described here.</p>
+  <h2>Storage, access and service providers</h2>
+  <p>Authorization credentials are kept in protected configuration files on the administrator's authorized computer and/or backup server. Encrypted backup objects are stored on the backup server and in the chosen Google Drive destination. Operational logs remain with the backup operation. Access to stored copies is governed by server permissions and the Drive account/folder permissions configured by its owner.</p>
+  <p>The integration necessarily sends backup objects and API requests to Google Drive and uses the operator's configured server hosting. It does not publish backup contents on this information website. Google processes information under its <a href="https://policies.google.com/privacy">Privacy Policy</a> and applicable service terms.</p>
+  <h2>Retention, removal and revocation</h2>
+  <p>Backup copies are retained according to the administrator's configured backup and retention arrangements. The current Google uploader adds missing objects and does not itself expire or delete existing destination objects. Removal of cloud backups or changes to retention require a separate authorized administrator action.</p>
+  <p>The account owner can revoke the application's access through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation prevents subsequent authorized transfers; it does not automatically delete copies already stored. For a removal request or an explanation of retention, contact the backup administrator using the User support email displayed for RTP Backup on Google's authorization screen.</p>
+  <h2>These information pages</h2>
+  <p>These static pages contain no credential forms, application scripts or analytics trackers. If hosted on GitHub Pages, GitHub logs visitor IP addresses for security and processes hosting requests under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>. No backup data or OAuth secrets are placed in the public website repository.</p>
+  <h2>Changes and questions</h2>
+  <p>The administrator should update this notice before changing the integration's data use. Any newly required Google permissions must be presented through Google's authorization flow. Questions about access, backup use or removal should be sent to the RTP Backup administrator via the User support email on the Google consent screen.</p>
+  <footer class="muted"><a href="index.html">Return to RTP Backup</a></footer>
+</main>
+</body>
+</html>

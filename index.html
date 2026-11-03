@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="RTP Backup is a private utility for copying encrypted server backup repositories to an administrator-selected Google Drive folder.">
+  <title>RTP Backup</title>
+  <style>
+    :root{color-scheme:light;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#18243a;background:#f4f6fa}
+    body{margin:0;line-height:1.65}main{max-width:760px;margin:64px auto;padding:40px;background:white;border:1px solid #dbe2ee;border-radius:16px}
+    h1{font-size:2.6rem;line-height:1.15;letter-spacing:-.04em;margin:12px 0 24px}h2{font-size:1.2rem;margin-top:30px}a{color:#164da4;text-underline-offset:3px}
+    .label{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#51627c}.note{padding:18px 20px;background:#edf3ff;border-left:4px solid #315fa5;border-radius:4px}
+    footer{margin-top:36px;padding-top:18px;border-top:1px solid #e2e7ef;font-size:.9rem;color:#53627a}li{margin:7px 0}@media(max-width:650px){main{margin:20px 12px;padding:26px}h1{font-size:2.1rem}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="label">Private backup utility</div>
+  <h1>RTP Backup</h1>
+  <p>RTP Backup copies encrypted server backup repositories to a Google Drive folder selected by the backup administrator. It uses rclone and the Google Drive API for offsite backup storage.</p>
+  <div class="note">This is an information page for a privately operated backup tool. It does not provide public registration, collect credentials, or grant access to backups.</div>
+  <h2>How the tool is used</h2>
+  <ul>
+    <li>The administrator authorizes access to the Google account used for backup storage.</li>
+    <li>The uploader reads local encrypted backup objects and adds missing objects to the configured Drive backup folder.</li>
+    <li>The current uploader preserves existing destination objects; deletion or retention changes require a separate administrator action.</li>
+    <li>Transfer logs and status checks help the administrator identify incomplete or failed uploads.</li>
+  </ul>
+  <h2>Google Drive access</h2>
+  <p>The tool requests the Google Drive access scope needed to locate and maintain the existing backup folder. This OAuth permission is broader than the folder used by the configured upload job. Authorization is completed on Google's consent screen; this website has no sign-in form.</p>
+  <h2>Privacy and contact</h2>
+  <p>Read the <a href="privacy.html">RTP Backup Privacy Notice</a> for the information accessed, how it is used, and how to revoke access or request removal. For questions, contact the backup administrator using the <strong>User support email</strong> displayed for RTP Backup on the Google authorization screen.</p>
+  <footer>RTP Backup · Information updated 3 November 2026 · <a href="privacy.html">Privacy notice</a></footer>
+</main>
+</body>
+</html>
